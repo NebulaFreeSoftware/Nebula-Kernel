@@ -1,0 +1,63 @@
+# ************************************
+# *** Find Dracma Api Source Files ***
+# ************************************
+
+FIND_DRACMAAPI_C   := $(shell find $(SOURCE_FOLDER_DRACMAAPI) -type f -name '*.c')
+FIND_DRACMAAPI_CPP := $(shell find $(SOURCE_FOLDER_DRACMAAPI) -type f -name '*.cpp')
+FIND_DRACMAAPI_COB := $(shell find $(SOURCE_FOLDER_DRACMAAPI) -type f -name '*.cbl')
+
+# ********************************************************
+# *** Find Dracma Position Magnament Risk Source Files ***
+# ********************************************************
+
+FIND_DRACMAPOSITIONMAGNAMENT_RISK_C   := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK) -type f -name '*.c')
+FIND_DRACMAPOSITIONMAGNAMENT_RISK_CPP := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK) -type f -name '*.cpp')
+FIND_DRACMAPOSITIONMAGNAMENT_RISK_COB := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK) -type f -name '*.cbl')
+
+# *********************************************************
+# *** Find Dracma Position Magnament Logic Source Files ***
+# *********************************************************
+
+FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_C   := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC) -type f -name '*.c')
+FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_CPP := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC) -type f -name '*.cpp')
+FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_COB := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC) -type f -name '*.cbl')
+
+# **********************************************************
+# *** Find Dracma Position Magnament Wealth Source Files ***
+# **********************************************************
+
+FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_C   := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH) -type f -name '*.c')
+FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_CPP := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH) -type f -name '*.cpp')
+FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_COB := $(shell find $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH) -type f -name '*.cbl')
+
+# ************************************
+# *** Find Dracma Api Object Files ***
+# ************************************
+
+FIND_OBJECT_DRACMAAPI_C   := $(patsubst $(SOURCE_FOLDER_DRACMAAPI)/%.c,$(OBJECT_C_FOLDER_DRACMAAPI)/%.o,$(FIND_DRACMAAPI_C))
+FIND_OBJECT_DRACMAAPI_CPP := $(patsubst $(SOURCE_FOLDER_DRACMAAPI)/%.cpp,$(OBJECT_CPP_FOLDER_DRACMAAPI)/%.o,$(FIND_DRACMAAPI_CPP))
+FIND_OBJECT_DRACMAAPI_COB := $(patsubst $(SOURCE_FOLDER_DRACMAAPI)/%.cbl,$(OBJECT_COBOL_FOLDER_DRACMAAPI)/%.o,$(FIND_DRACMAAPI_COB))
+
+# ********************************************************
+# *** Find Dracma Position Magnament Risk Object Files ***
+# ********************************************************
+
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_RISK_C   := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.c,$(OBJECT_C_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_RISK_C))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_RISK_CPP := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.cpp,$(OBJECT_CPP_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_RISK_CPP))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_RISK_COB := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.cbl,$(OBJECT_COBOL_FOLDER_DRACMAPOSITIONMAGNAMENT_RISK)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_RISK_COB))
+
+# *********************************************************
+# *** Find Dracma Position Magnament Logic Object Files ***
+# *********************************************************
+
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_LOGIC_C   := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.c,  $(OBJECT_C_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_C))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_LOGIC_CPP := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.cpp,$(OBJECT_CPP_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_CPP))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_LOGIC_COB := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.cbl,$(OBJECT_COBOL_FOLDER_DRACMAPOSITIONMAGNAMENT_LOGIC)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_LOGIC_COB))
+
+# **********************************************************
+# *** Find Dracma Position Magnament Wealth Object Files ***
+# **********************************************************
+
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_WEALTH_C   := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.c,  $(OBJECT_C_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_C))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_WEALTH_CPP := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.cpp,$(OBJECT_CPP_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_CPP))
+FIND_OBJECT_DRACMAPOSITIONMAGNAMENT_WEALTH_COB := $(patsubst $(SOURCE_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.cbl,$(OBJECT_COBOL_FOLDER_DRACMAPOSITIONMAGNAMENT_WEALTH)/%.o,$(FIND_DRACMAPOSITIONMAGNAMENT_WEALTH_COB))
