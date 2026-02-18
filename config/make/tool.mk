@@ -10,11 +10,11 @@ COB := cobc
 # *** Linkers ***
 # ***************
 
-LD := g++
+LD := ld
 
 # *****************
 # *** Utilities ***
 # *****************
 
 AR := ar
-LN := ln
+CP := objcopy

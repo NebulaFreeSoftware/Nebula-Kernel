@@ -10,5 +10,5 @@ OBJECT_CPP_FILE_MAIN := ./build/bin/obj/c/start.o
 # ********************
 
 
-NEBULA_BIN := $(BUILD_FOLDER_BIN)/nebula_kernel.bin
-NEBULA_IMG := $(BUILD_FOLDER_IMG)/$(NEBULA_IMAGE).$(NEBULA_EXTENSION)
+NEBULA_BIN := $(BUILD_FOLDER_BIN)/NebulaOS.bin
+NEBULA_IMG := $(BUILD_FOLDER_IMG)/$(NEBULA_NAME)

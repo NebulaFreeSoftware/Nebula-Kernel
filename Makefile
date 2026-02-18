@@ -11,6 +11,12 @@
 
 include config/make/shell.mk
 
+# ****************************
+# *** Environment Settings ***
+# ****************************
+
+include config/make/environment.mk
+
 # ***************
 # *** Folders ***
 # ***************
