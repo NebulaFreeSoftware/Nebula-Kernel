@@ -16,6 +16,6 @@ LDSCRIPT := $(CONFIG_FOLDER)/$(LDFILE)
 # ********************
 
 
-NEBULA_ELF := $(BUILD_FOLDER_BIN)/NebulaOS.elf
-NEBULA_BIN := $(BUILD_FOLDER_BIN)/NebulaOS.bin
+NEBULA_ELF := $(BUILD_FOLDER_BIN)/NebulaKernel.elf
+NEBULA_BIN := $(BUILD_FOLDER_BIN)/NebulaKernel.bin
 NEBULA_IMG := $(BUILD_FOLDER_IMG)/$(NEBULA_NAME)
