@@ -12,7 +12,7 @@ $(OBJECT_FILE_START_C): $(SOURCE_FILE_START_C)
 
 $(NEBULA_ELF): $(OBJECT_FILE_START_C) $(FIND_OBJECT_FILES_SC_C) $(FIND_OBJECT_FILES_MMU_C) $(FIND_OBJECT_FILES_IPC_C) $(FIND_OBJECT_FILES_ISR_C) $(FIND_OBJECT_FILES_TMM_C)
 	@mkdir -p $(dir $@)
-	$(LD) $(LDFLAGS) -o $@ $<
+	$(LD) $(LDFLAGS) -o $@ $^
 
 # *******************
 # *** Flat Binary ***
