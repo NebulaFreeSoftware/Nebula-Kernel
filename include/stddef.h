@@ -8,8 +8,8 @@
  * with the POSIX 2001 - 2024 standard.
  * */
 
-#ifndef _STDIO_H
-#define _STDIO_H
+#ifndef _STDDEF_H
+#define _STDDEF_H
 
 // ********************************
 // *** Macro for include on c++ ***
@@ -18,6 +18,21 @@
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
+
+#include <stdint.h>
+
+typedef int64_t  max_align_t;
+typedef int**    ptrdiff_t;
+
+#ifdef  _WCHAR_T
+#define _WCHAR_T
+typedef int32_t  wchar_t;
+#endif // _WCHAR_T
+
+#ifdef  _SIZE_T
+#define _SIZE_T
+typedef uint64_t size_t;
+#endif // _SIZE_T
 
 // ********************************
 // *** Macro for include on c++ ***
@@ -31,4 +46,4 @@ extern "C" {
 // *** End File ***
 // ****************
 
-#endif // _STDIO_H
+#endif // _STDDEF_H
