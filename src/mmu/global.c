@@ -17,30 +17,15 @@
 // *** Notes ***
 // *************
 
-/**
- * This file was created to comply
- * with the POSIX 2001 - 2024 standard.
- * */
+// *********************************
+// *** Include Standar Libraries ***
+// *********************************
 
-// ***********************
-// *** Start of header ***
-// ***********************
+#include <stdlib.h>
+#include <stddef.h>
 
-#ifndef _STDLIB_H
-#define _STDLIB_H
+// ***********************************
+// *** Definition of the Variables ***
+// ***********************************
 
-#ifdef __cplusplus
-extern "C" {
-#endif // __cplusplus
-
-#include <Nebula/nebula.h>
-
-#ifndef NULL
-#define NULL ((void*) _NEBULA_NULL_POINTER)
-#endif // NULL
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif // _STDLIB_H
+int* _neb_dtb_ptr = NULL;

@@ -17,45 +17,41 @@
 // *** Notes ***
 // *************
 
-/**
- * This file was created to comply
- * with the POSIX 2001 - 2024 standard.
- * */
-
 // ***********************
 // *** Start of header ***
 // ***********************
 
-#ifndef _STDDEF_H
-#define _STDDEF_H
+#ifndef _NEBULA_KERNEL_H
+#define _NEBULA_KERNEL_H
 
-#ifdef __cplusplus
+#if defined(__cplusplus)
 extern "C" {
 #endif
 
-#include <stdint.h>
+// **********************
+// *** Special Macros ***
+// **********************
 
-#include <Nebula/nebula.h>
+#if defined(RASPBERRY)
+#define _NEBULA_NULL_POINTER 0x3080200
+#elif defined(STANDAR_X86_64)
+#define _NEBULA_NULL_POINTER 0x0
+#endif
 
-typedef int64_t  max_align_t;
-typedef int**    ptrdiff_t;
+// **************************
+// *** External Variables ***
+// **************************
 
-#ifndef _WCHAR_T
-#define _WCHAR_T
-typedef int32_t  wchar_t;
-#endif // _WCHAR_T
+extern int*  _neb_dtb_ptr;
 
-#ifndef _SIZE_T
-#define _SIZE_T
-typedef uint64_t size_t;
-#endif // _SIZE_T
+// **************************
+// *** External Functions ***
+// **************************
 
-#ifndef NULL
-#define NULL ((void*) _NEBULA_NULL_POINTER)
-#endif // NULL
+extern void _neb_kernel_start();
 
-#ifdef __cplusplus
+#if defined( __cplusplus)
 }
 #endif
 
-#endif // _STDDEF_H
+#endif // _NEBULA_KERNEL_H

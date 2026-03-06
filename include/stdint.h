@@ -1,12 +1,30 @@
-// **********************************
-// *** Author:  Nebula Technology ***
-// *** License: AGPL-3-or-later   ***
-// **********************************
+// SPDX-License-Identifier: AGPL-3-or-later
+
+// *********************************************************
+// *** Author:  Nebula Technology / Nebula Free Software ***
+// *** License: AGPL-3-or-later                          ***
+// *********************************************************
+
+// ****************
+// *** Features ***
+// ****************
+
+// ********************
+// *** Dependencies ***
+// ********************
+
+// *************
+// *** Notes ***
+// *************
 
 /**
  * This file was created to comply
  * with the POSIX 2001 - 2024 standard.
  * */
+
+// ***********************
+// *** Start of header ***
+// ***********************
 
 #ifndef _STDINT_H
 #define _STDINT_H
@@ -31,7 +49,8 @@ typedef unsigned char  uint8_t;
 typedef unsigned short uint16_t;
 typedef unsigned int   uint32_t;
 
-#ifdef _POSIX_V8_LP64_OFF64
+#ifndef _POSIX_V8_LP64_OFF64
+#define _POSIX_V8_LP64_OFF64
 typedef signed   long long int64_t;
 typedef unsigned long long uint64_t;
 #endif // _POSIX_V8_LP64_OFF64

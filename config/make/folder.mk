@@ -12,11 +12,11 @@ SOURCE_FOLDER_TMM := ./src/tmm
 # *** Object C Folders ***
 # ************************
 
-OBJECT_FOLDER_SC_C  := ./build/obj/sc/c
-OBJECT_FOLDER_MMU_C := ./build/obj/mmu/c
-OBJECT_FOLDER_IPC_C := ./build/obj/ipc/c
-OBJECT_FOLDER_ISR_C := ./build/obj/isr/c
-OBJECT_FOLDER_TMM_C := ./build/obj/tmm/c
+OBJECT_FOLDER_SC  := ./build/obj/sc
+OBJECT_FOLDER_MMU := ./build/obj/mmu
+OBJECT_FOLDER_IPC := ./build/obj/ipc
+OBJECT_FOLDER_ISR := ./build/obj/isr
+OBJECT_FOLDER_TMM := ./build/obj/tmm
 
 # **************
 # *** Binary ***

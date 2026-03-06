@@ -17,36 +17,14 @@
 // *** Notes ***
 // *************
 
-/**
- * This file was created to comply
- * with the POSIX 2001 - 2024 standard.
- * */
-
 // ***********************
 // *** Start of header ***
 // ***********************
 
-#ifndef _STDIO_H
-#define _STDIO_H
+.ifndef _NEBULA_KERNEL_S
+.set    _NEBULA_KERNEL_S, 1
 
-// ********************************
-// *** Macro for include on c++ ***
-// ********************************
+.extern _neb_kernel_start
+.extern _neb_dtb_ptr
 
-#ifdef __cplusplus
-extern "C" {
-#endif // __cplusplus
-
-// ********************************
-// *** Macro for include on c++ ***
-// ********************************
-
-#ifdef __cplusplus
-}
-#endif // __cplusplus
-
-// ****************
-// *** End File ***
-// ****************
-
-#endif // _STDIO_H
+.endif

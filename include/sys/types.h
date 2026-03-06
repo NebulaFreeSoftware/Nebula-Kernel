@@ -1,12 +1,30 @@
-// **********************************
-// *** Author:  Nebula Technology ***
-// *** License: AGPL-3-or-later   ***
-// **********************************
+// SPDX-License-Identifier: AGPL-3-or-later
+
+// *********************************************************
+// *** Author:  Nebula Technology / Nebula Free Software ***
+// *** License: AGPL-3-or-later                          ***
+// *********************************************************
+
+// ****************
+// *** Features ***
+// ****************
+
+// ********************
+// *** Dependencies ***
+// ********************
+
+// *************
+// *** Notes ***
+// *************
 
 /**
  * This file was created to comply
  * with the POSIX 2001 - 2024 standard.
  * */
+
+// ***********************
+// *** Start of header ***
+// ***********************
 
 #ifndef _SYS_TYPES_H
 #define _SYS_TYPES_H
@@ -19,17 +37,19 @@
 extern "C" {
 #endif // __cplusplus
 
-typedef unsigned long long blkcnt_t;  // Used for file block counts
-typedef unsigned long long blksize_t; // Used for block sizes.
+#include <stdint.h>
+
+typedef size_t blkcnt_t;  // Used for file block counts
+typedef size_t blksize_t; // Used for block sizes.
 
 #ifdef  _CLOCK_T
 #define _CLOCK_T
-typedef signed   long long clock_t;   // Used for system times in clock ticks or CLOCKS_PER_SEC
+typedef int64_t clock_t;   // Used for system times in clock ticks or CLOCKS_PER_SEC
 #endif // _CLOCK_T
 
 #ifdef  _CLOCKID_T
 #define _CLOCKID_T
-typedef unsigned long long clockid_t; // Used for clock ID type in the clock and timer functions.
+typedef size_t clockid_t; // Used for clock ID type in the clock and timer functions.
 #endif // _CLOCKID_T
 
 // ********************************

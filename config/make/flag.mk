@@ -6,6 +6,12 @@ CFLAGS   := -Wall -Wextra -Werror -ffreestanding -nostdlib -nostartfiles -march=
 CXXFLAGS := -Wall -Wextra -Werror -ffreestanding -nostdlib -nostartfiles -march=$(MARCH) -Iinclude
 COBFLAGS := -Wall -Wextra -Werror -std=ibm-strict -fstatic-call -Iinclude
 
+# ***********************
+# *** Assembler Flags ***
+# ***********************
+
+ASFLAGS  := -EL -Iinclude
+
 # *********************
 # *** Linkers Flags ***
 # *********************
@@ -25,11 +31,11 @@ CPFLAGS := -O binary
 
 ifeq ($(TARGET), AMD64)
 
-QEMUFLAG := -cpu EPYC -m 8000
+QEMUFLAGS := -cpu EPYC -m 8000
 
 else ifeq ($(TARGET), ARM64)
 
-QEMUFLAG := -cpu cortex-a76 -m 8000
+QEMUFLAGS := -machine raspi4b -cpu cortex-a76 -m 2048 -kernel
 
 else
 $(error Don't support $(TARGET))

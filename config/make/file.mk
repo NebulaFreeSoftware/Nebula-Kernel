@@ -2,8 +2,11 @@
 # *** Main File ***
 # *****************
 
-SOURCE_FILE_START_C := ./src/start.c
-OBJECT_FILE_START_C := ./build/bin/obj/c/start.o
+SOURCE_FILE_START_ASM := ./src/assembly/$(NEBULA_ARCH)/$(COMPUTER)/start.s
+SOURCE_FILE_START_CPP := ./src/start.cpp
+
+OBJECT_FILE_START_ASM := ./build/bin/obj/start.s.o
+OBJECT_FILE_START_CPP := ./build/bin/obj/start.cpp.o
 
 # **************************
 # *** Linker Script File ***

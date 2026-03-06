@@ -17,30 +17,21 @@
 // *** Notes ***
 // *************
 
-/**
- * This file was created to comply
- * with the POSIX 2001 - 2024 standard.
- * */
+// ***********************************
+// *** Definition of Global Labels ***
+// ***********************************
 
-// ***********************
-// *** Start of header ***
-// ***********************
+.globl _start
 
-#ifndef _STDLIB_H
-#define _STDLIB_H
+.include "utils/nebula.i" // Equivalent to nebula.h but is not equal to nebula.h 
 
-#ifdef __cplusplus
-extern "C" {
-#endif // __cplusplus
+// ********************
+// *** Code Section ***
+// ********************
 
-#include <Nebula/nebula.h>
+.section .text
 
-#ifndef NULL
-#define NULL ((void*) _NEBULA_NULL_POINTER)
-#endif // NULL
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif // _STDLIB_H
+	_start:
+		ldr		x1, =_neb_dtb_ptr  // Get address of memory
+		str		x0, [x1]           // Store value from x0 to _neb_dtb_ptr
+		bl		_neb_kernel_start  // Jump to _neb_kernel_start
